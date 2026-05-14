@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>Stanley Erhabor · full-stack developer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Google Fonts -->
@@ -625,6 +626,18 @@
       flex-shrink: 0;
       margin-top: 3px;
       animation: bounce 2s infinite;
+    }
+
+    .feature-list code,
+    .project-showcase code {
+      background: #e7f0f7;
+      color: var(--accent);
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      word-break: break-word;
+      overflow-wrap: anywhere;
     }
     
     @keyframes bounce {
@@ -1320,7 +1333,7 @@
         <h3>Blueprint · Clinical Session Management</h3>
         <p>Clinical workflow platform built in collaboration with a psychologist at a private mental health hospital. Iterated through three rounds of stakeholder testing.</p>
         <div class="card-footer">
-          <span class="tag">full stack · stakeholder-tested</span>
+          <span class="tag">Full stack</span>
           <a href="#" data-page="project-6" class="card-link">view case <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
@@ -1331,7 +1344,7 @@
         <h3>The Bridge</h3>
         <p>Communication web app helping adults express emotions clearly with an admin dashboard and therapist tools.</p>
         <div class="card-footer">
-          <span class="tag">Full stack healthtech</span>
+          <span class="tag">Full stack</span>
           <a href="#" data-page="project-2" class="card-link">view case <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
@@ -1733,7 +1746,7 @@
     <header class="project-header">
       <h1>Blueprint · Clinical Session Management Platform</h1>
       <div class="project-meta">
-        <span><i class="fas fa-calendar"></i> 2025–2026</span>
+        <span><i class="fas fa-calendar"></i> 2026</span>
         <span><i class="fas fa-code-branch"></i> PHP (Custom MVC)</span>
         <span><i class="fas fa-database"></i> MySQL</span>
       </div>
@@ -1747,7 +1760,7 @@
 
       <h2 style="margin:2rem 0 1rem;">Key Engineering Highlights</h2>
       <ul class="feature-list">
-        <li><i class="fas fa-check-circle"></i> Custom PHP MVC architecture no framework, full control over routing, controllers, and views</li>
+        <li><i class="fas fa-check-circle"></i> Custom PHP MVC architecture, no framework, full control over routing, controllers, and views</li>
         <li><i class="fas fa-check-circle"></i> Session-based authentication with CSRF protection on every form</li>
         <li><i class="fas fa-check-circle"></i> Full audit-trail activity log supporting clinical accountability and CQC requirements</li>
         <li><i class="fas fa-check-circle"></i> Group therapy workflow with dynamic ward-based attendance registers and live attendance marking</li>
@@ -1758,9 +1771,9 @@
 
       <h2 style="margin:2rem 0 1rem;">Iterative Delivery</h2>
       <ul class="feature-list">
-        <li><i class="fas fa-check-circle"></i> <strong>v1.0</strong> — Ward-based dashboard, patient admission/discharge, individual session tracking</li>
-        <li><i class="fas fa-check-circle"></i> <strong>v1.2</strong> — Calendar system, ward filtering, editable CORE-10, UI overhaul from clinician feedback</li>
-        <li><i class="fas fa-check-circle"></i> <strong>v1.4</strong> — Full group session workflow, attendance registers, backdated discharge support, mobile responsive (current version)</li>
+        <li><i class="fas fa-check-circle"></i> <strong>v1.0</strong> Ward-based dashboard, patient admission/discharge, individual session tracking</li>
+        <li><i class="fas fa-check-circle"></i> <strong>v1.2</strong> Calendar system, ward filtering, editable CORE-10, UI overhaul from clinician feedback</li>
+        <li><i class="fas fa-check-circle"></i> <strong>v1.4</strong> Full group session workflow, attendance registers, backdated discharge support, mobile responsive (current version)</li>
       </ul>
 
       <div class="btn-group">
