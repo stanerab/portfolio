@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio site for Stanley Erhabor — full-stack developer specialising in PHP, JavaScript, React, and MySQL.
+Personal portfolio site for Stanley Erhabor. Full-stack developer specialising in PHP, JavaScript, React, and MySQL.
 
 **Live site:** https://portfolio.blueprintcaretech.com/#home
 
