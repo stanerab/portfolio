@@ -359,13 +359,11 @@
       position: relative;
       overflow: hidden;
       opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transition: opacity 0.6s ease;
     }
     
     .project-card.visible {
       opacity: 1;
-      transform: translateY(0);
     }
 
     /* NO HOVER EFFECTS - Removed all :hover styles */
@@ -1098,11 +1096,9 @@
     @keyframes pageTransition {
       from {
         opacity: 0;
-        transform: translateY(20px);
       }
       to {
         opacity: 1;
-        transform: translateY(0);
       }
     }
 
@@ -1175,7 +1171,7 @@
       }
 
       .hero {
-        margin: 1rem 0 2rem;
+        margin: 2rem 0 2rem;
       }
 
       .hero-image {
@@ -1273,16 +1269,12 @@
     /* Prevent text size adjustment on orientation change */
     html {
       -webkit-text-size-adjust: 100%;
+      scroll-padding-top: var(--header-height);
     }
 
     /* Better scrolling on mobile */
     .nav-links {
       -webkit-overflow-scrolling: touch;
-    }
-
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
     }
   </style>
 </head>
@@ -1648,8 +1640,7 @@
         <li><i class="fas fa-check-circle"></i> Admin dashboard for account management</li>
       </ul>
       <div class="btn-group">
-        <a href="https://adhd.infinityfree.me/home.php" target="_blank" class="btn"><i class="fas fa-globe"></i> Live Demo</a>
-        <a href="https://github.com/stanerab/adhd_bridge" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> Source Code</a>
+<a href="https://the-bridge.blueprintcaretech.com/Admin_test/login.php" target="_blank" class="btn"><i class="fas fa-globe"></i> Live Demo</a>        <a href="https://github.com/stanerab/adhd_bridge" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> Source Code</a>
       </div>
       <a href="#" class="back-link back-to-projects"><i class="fas fa-arrow-left"></i> Back to projects</a>
     </article>
@@ -1706,7 +1697,7 @@
       </ul>
 
       <div class="btn-group">
-        <a href="https://adhd.infinityfree.me/weather/" target="_blank" class="btn"><i class="fas fa-globe"></i> Live Demo</a>
+        <a href="https://skysense.blueprintcaretech.com/" target="_blank" class="btn"><i class="fas fa-globe"></i> Live Demo</a>
         <a href="https://github.com/stanerab/weather_app" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> Source Code</a>
       </div>
 
@@ -1734,7 +1725,7 @@
         <li><i class="fas fa-check-circle"></i> Fully responsive mobile-first layout</li>
       </ul>
       <div class="btn-group">
-        <a href="https://adhd.infinityfree.me/Primesales/home.html" target="_blank" class="btn"><i class="fas fa-globe"></i> Live Demo</a>
+        <a href="https://primesales.blueprintcaretech.com/home.html" target="_blank" class="btn"><i class="fas fa-globe"></i> Live Demo</a>
         <a href="https://github.com/stanerab/e-commerce-" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> Source Code</a>
       </div>
       <a href="#" class="back-link back-to-projects"><i class="fas fa-arrow-left"></i> Back to projects</a>
@@ -1884,7 +1875,8 @@
       
       // Scroll based on parameter
       if (scrollToProjects && pageId === 'home') {
-        setTimeout(() => {
+        // Scroll to the project grid; don't fight it with a scroll-to-top first
+        requestAnimationFrame(() => {
           const projectsSection = document.querySelector('.project-grid');
           if (projectsSection) {
             const offset = 100;
@@ -1894,9 +1886,10 @@
               behavior: 'smooth'
             });
           }
-        }, 100);
+        });
       } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Jump instantly to top; smooth scroll on first load causes the auto-scroll glitch
+        window.scrollTo({ top: 0, behavior: 'instant' });
       }
       
       closeMenu();
