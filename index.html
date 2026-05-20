@@ -1330,6 +1330,17 @@
         </div>
       </div>
 
+      <!-- Android Blog App -->
+      <div class="project-card">
+        <div class="project-icon"><i class="fab fa-android"></i></div>
+        <h3>Android Blog App</h3>
+        <p>Native Android blogging application built in Java with offline-first SQLite storage, camera and gallery integration, Android Share intent, and online publishing to Facebook.</p>
+        <div class="card-footer">
+          <span class="tag">Android · Java</span>
+          <a href="#" data-page="project-7" class="card-link">view case <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
       <!-- The Bridge -->
       <div class="project-card">
         <div class="project-icon"><i class="fas fa-brain"></i></div>
@@ -1732,7 +1743,7 @@
     </article>
   </section>
 
-  <!-- ################  PROJECT 6 – BLUEPRINT  ################ -->
+<!-- ################  PROJECT 6 – BLUEPRINT  ################ -->
   <section id="project-6" class="page">
     <header class="project-header">
       <h1>Blueprint · Clinical Session Management Platform</h1>
@@ -1770,6 +1781,46 @@
       <div class="btn-group">
         <a href="https://blueprintcaretech.com" target="_blank" class="btn"><i class="fas fa-globe"></i> Live Demo</a>
         <a href="https://github.com/stanerab/Blueprint_App" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> Source Code</a>
+      </div>
+
+      <a href="#" class="back-link back-to-projects"><i class="fas fa-arrow-left"></i> Back to projects</a>
+    </article>
+  </section>
+
+  <!-- ################  PROJECT 7 – ANDROID BLOG APP  ################ -->
+  <section id="project-7" class="page">
+    <header class="project-header">
+      <h1>Android Blog App · Secure Mobile Application</h1>
+      <div class="project-meta">
+        <span><i class="fas fa-calendar"></i> 2026</span>
+        <span><i class="fab fa-android"></i> Java · Android Studio</span>
+        <span><i class="fas fa-database"></i> SQLite</span>
+      </div>
+    </header>
+    <article class="project-showcase">
+      <img src="images/projects/android-blog.png" alt="Android Blog App showing post list with search and create button" loading="lazy">
+
+      <h2 style="margin:1.5rem 0 1rem;">Project Overview</h2>
+      <p>A native Android blogging application built in Java using Android Studio, developed as portfolio coursework for <strong>6CS027 Secure Mobile Application Development</strong> at the University of Wolverhampton. The app supports both <strong>offline and online</strong> workflows, allowing users to manage blog posts entirely on-device, attach media from the camera or photo gallery, share content via Android's standard intent system, and upload posts to Facebook for online publishing.</p>
+      <p style="margin-top:1rem;">The project was assessed against four learning outcomes covering offline data persistence, media integration, the Android Intent system, and online data upload achieving a <strong>final mark of 95% (Distinction)</strong>.</p>
+
+      <h2 style="margin:2rem 0 1rem;">Key Engineering Highlights</h2>
+      <ul class="feature-list">
+        <li><i class="fas fa-check-circle"></i> Full offline message CRUD with create, edit, view, and delete operations</li>
+        <li><i class="fas fa-check-circle"></i> Search across all post content with matching results displayed instantly</li>
+        <li><i class="fas fa-check-circle"></i> Bulk selection and deletion of multiple posts at once</li>
+        <li><i class="fas fa-check-circle"></i> Persistent on-device storage using <code>SQLite</code> relational database</li>
+        <li><i class="fas fa-check-circle"></i> Photo attachment from both the device photo gallery and the camera</li>
+        <li><i class="fas fa-check-circle"></i> Content sharing via the standard Android Share intent for email and other apps</li>
+        <li><i class="fas fa-check-circle"></i> Online upload of individual or grouped posts to a personal Facebook account</li>
+      </ul>
+
+      <h2 style="margin:2rem 0 1rem;">Demo Video</h2>
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:var(--radius-md); border:1px solid var(--border); margin:1rem 0;">
+<iframe src="https://www.youtube.com/embed/kh93NAXIFpY" title="Android Blog App Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>      </div>
+
+      <div class="btn-group">
+        <a href="https://github.com/stanerab/android-blog-app" target="_blank" class="btn"><i class="fab fa-github"></i> Source Code</a>
       </div>
 
       <a href="#" class="back-link back-to-projects"><i class="fas fa-arrow-left"></i> Back to projects</a>
@@ -1931,7 +1982,7 @@
 
     // Handle initial hash
     const hash = window.location.hash.substring(1);
-    const validPages = ['home','about','contact','project-1','project-2','project-3','project-4','project-5','project-6'];
+const validPages = ['home','about','contact','project-1','project-2','project-3','project-4','project-5','project-6','project-7'];
     showPage(validPages.includes(hash) ? hash : 'home', false);
 
     // Handle browser back/forward
